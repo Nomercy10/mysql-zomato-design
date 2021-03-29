@@ -135,6 +135,7 @@ create table orders_details(
 	constraint fk_zo_employee FOREIGN KEY (emp_id) REFERENCES zo_employee(emp_id)
 );
 
+-- Insert values into orders_details
 insert into orders_details(order_id, cust_id, rest_id, emp_id, order_status, order_time, delivered_time) VALUES
 ( 6001, 101, 1001, 2001, 'confirmed', '2020-02-01 12:20:19', '2020-02-01 12:50:19'),
 ( 6002, 102, 1002, 2002, 'pending', '2020-03-22 21:20:19', '2020-03-22 21:50:19'),
@@ -167,6 +168,7 @@ create table payments(
 	constraint fk_orders_details FOREIGN KEY (order_id) REFERENCES orders_details(order_id)
 );
 
+-- insert values in to payments table
 insert into payments(transaction_id, order_id, payment_type, payment_status, amount) VALUES
 (87878787, 6001, "Debit Card", 'paid', '200.00'),
 (87873434, 6002, "COD", 'unpaid', '120.00'),
@@ -202,7 +204,7 @@ create table orders_food(
 	constraint fk_foods FOREIGN KEY (food_id) REFERENCES foods(food_id)
 );
 
-
+-- inser values into orders_food table
 insert into orders_food(order_food_id, order_id, cust_id, rest_id, food_id, qty, emp_id) VALUES
 (8810, 6001, 101, 1005,9999, 1, 2001),
 (8811, 6002, 102, 1004,9991, 2, 2002),
@@ -230,6 +232,7 @@ create table wallet(
 	constraint fk_cust_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id)
 );
 
+-- insert values into wallet table
 insert into wallet(wallet_id, wallet_balance, cust_id) VALUES
 (3001,"300.00", 101),
 (3002,"400.00", 102),
