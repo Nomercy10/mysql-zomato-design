@@ -80,3 +80,6 @@ group by rest_id
 having orders > 2;
 ```
 
+### ER diagram 
+![MySql_zomato](https://user-images.githubusercontent.com/29841887/112835628-25a64280-90b7-11eb-9d2d-6f433aa12791.jpg)
+
