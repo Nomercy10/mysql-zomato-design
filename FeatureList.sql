@@ -224,7 +224,7 @@ drop table if exists wallet
 
 create table wallet(
 	wallet_id int(4) not null,
-	wallet_balance int(4) not null,
+	wallet_balance decimal(2, 1) not null,
 	cust_id int(4) not null,
 	constraint pk_wallet primary key (wallet_id),
 	constraint fk_cust_id FOREIGN KEY (cust_id) REFERENCES customers(cust_id)
